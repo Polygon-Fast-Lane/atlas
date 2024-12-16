@@ -41,7 +41,7 @@ contract DeployBaseScript is Script {
             return "LOCAL";
         } else if (chainId == 1) {
             return "MAINNET";
-        } else if (chainId == 42) {
+        } else if (chainId == 11_155_111) {
             return "SEPOLIA";
         } else if (chainId == 17_000) {
             return "HOLESKY";
@@ -66,7 +66,7 @@ contract DeployBaseScript is Script {
         } else if (chainId == 84_532) {
             return "BASE SEPOLIA";
         } else {
-            revert("Error: Chain ID not recognized");
+            revert(string.concat("Error: Chain ID not recognized: ", vm.toString(chainId)));
         }
     }
 
