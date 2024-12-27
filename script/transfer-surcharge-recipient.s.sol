@@ -32,6 +32,7 @@ contract TransferSurchargeRecipientScript is DeployBaseScript {
         atlas.transferSurchargeRecipient(newRecipient);
         vm.stopBroadcast();
 
-        console.log("\nSurcharge recipient successfully transferred to:", newRecipient);
+        console.log("\nSurcharge recipient transfer initiated to:", newRecipient);
+        console.log("Recipient has to call `becomeSurchargeRecipient()` to become the new surcharge recipient.");
     }
 }
