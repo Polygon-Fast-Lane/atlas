@@ -60,7 +60,7 @@
       "solver-deposit": "source .env && forge script script/solver-deposit.s.sol:SolverAtlasDepositScript --fork-url http://localhost:8545 --broadcast --non-interactive",
       "setup-demo": "npm run deploy-atlas-swap-intent-tx-builder && npm run deploy-solver && npm run solver-deposit",
 
-      "transfer-surcharge-recipient:sepolia": ". ./.env && forge script script/transfer-surcharge-recipient.s.sol:TransferSurchargeRecipientScript --rpc-url ${SEPOLIA_RPC_URL} --sig 'run(string)' --broadcast --non-interactive",
+      "transfer-surcharge-recipient:sepolia": ". ./.env && forge script script/transfer-surcharge-recipient.s.sol:TransferSurchargeRecipientScript --rpc-url ${SEPOLIA_RPC_URL} --sig 'run(string)' --broadcast --non-interactive --slow",
 
       "atlas-addr": "echo 'ATLAS:' && jq -r '.ATLAS' deployments.json",
       "swap-intent-addr": "echo 'SWAP INTENT DAPP CONTROL:' && jq -r '.SWAP_INTENT_DAPP_CONTROL' deployments.json",
